@@ -6,7 +6,7 @@ set(VCPKG_LIBRARY_LINKAGE static)
 set(CMAKE_TOOLCHAIN_FILE "D:/Dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 set(CMAKE_GENERATOR_PLATFORM "x64")
-project(renderer CUDA CXX)
+project(renderer CXX)
 
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)

@@ -1,7 +1,12 @@
 #include "processor.h"
 
 __global__
-void pTest()
+void kernel_test()
 {
     //
+}
+
+void pTest()
+{
+    kernel_test<<<1, 1>>>();
 }

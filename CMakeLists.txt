@@ -10,7 +10,7 @@ set(CMAKE_TOOLCHAIN_FILE "D:/Dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
 set(CMAKE_GENERATOR_PLATFORM "x64")
 
 # Setup the project with used languages
-project("CUDA_TESTS" CUDA CXX)
+project("CUDA_TESTS" CXX)
 
 # Find libs
 find_package(OpenGL REQUIRED)
@@ -22,7 +22,7 @@ add_subdirectory(renderer)
 add_subdirectory(processor)
 
 # Setup executable
-add_executable("${PROJECT_NAME}" main.cu)
+add_executable("${PROJECT_NAME}" main.cpp)
 # Link libs
 target_link_libraries(
     "${PROJECT_NAME}" 
