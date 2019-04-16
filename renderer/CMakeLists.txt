@@ -12,6 +12,7 @@ find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
+find_package(imgui CONFIG REQUIRED)
 
 add_library(renderer STATIC renderer.cpp renderer.h)
 target_link_libraries(
@@ -19,5 +20,6 @@ target_link_libraries(
     PUBLIC ${OPENGL_LIBRARIES} 
     PUBLIC GLEW::GLEW
     PUBLIC ${glfw3_LIBRARIES} 
-    PRIVATE ${glm_LIBRARIES}
+    PUBLIC ${glm_LIBRARIES}
+    PUBLIC imgui::imgui
 )
