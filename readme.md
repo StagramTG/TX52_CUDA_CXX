@@ -36,5 +36,8 @@ Pour installer VCPKG il suffit de cloner [le dépôt](https://github.com/Microso
 
 Pour installer les bibliothèques nécessaires avec VCPKG il suffit d'ouvrir un terminal dans le répertoire ou il est installé et utiliser cette commande :
 ```
+./vcpkg.exe integrate install
 ./vcpkg.exe install glfw3:x64-windows-static glm:x64-windows-static glew:x64-windows-static imgui:x64-windows-static glfw3:x64-windows glm:x64-windows glew:x64-windows imgui:x64-windows
 ```
+
+> Il faudra réaliser une modification dans les fichiers ```CMakeLists.txt``` pour que le chemin vers le fichier de configuration CMake de votre installation VCPKG.
