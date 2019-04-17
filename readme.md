@@ -41,3 +41,34 @@ Pour installer les bibliothèques nécessaires avec VCPKG il suffit d'ouvrir un 
 ```
 
 > Il faudra réaliser une modification dans les fichiers ```CMakeLists.txt``` pour que le chemin vers le fichier de configuration CMake de votre installation VCPKG.
+
+### Déclaration des Kernels CUDA
+Les kernel Cuda sont à déclarer dans des fichier ```.cu``` (qui seront donc compilés) et des fonctions C++ doivent être créées pour faire le pont et être utilisable dans le programme principale qui n'est pas compilé en CUDA.
+
+Par exemple le fichier ```processor/Processor.cu``` contient :
+```Cuda
+#include "processor.h"
+
+__global__
+void kernel_test()
+{
+    //
+}
+
+void pTest()
+{
+    kernel_test<<<1, 1>>>();
+}
+```
+
+Le fichier ```processor/Processor.h``` contient :
+```Cuda
+#ifndef PROCESSOR_H
+#define PROCESSOR_H
+
+void pTest();
+
+#endif // PROCESSOR_H
+```
+
+Ainsi on peut accéder aux fonctions qui appellent le Kernel depuis un projet C++ pur.
