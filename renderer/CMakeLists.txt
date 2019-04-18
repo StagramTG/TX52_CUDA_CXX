@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.14)
 set(VCPKG_TARGET_ARCHITECTURE x64)
 set(VCPKG_CRT_LINKAGE static)
 set(VCPKG_LIBRARY_LINKAGE static)
-set(CMAKE_TOOLCHAIN_FILE "D:/Dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "D:/programs/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 set(CMAKE_GENERATOR_PLATFORM "x64")
 project(renderer CXX)

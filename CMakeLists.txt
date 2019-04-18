@@ -4,13 +4,13 @@ cmake_minimum_required(VERSION "3.14")
 set(VCPKG_TARGET_ARCHITECTURE x64)
 set(VCPKG_CRT_LINKAGE static)
 set(VCPKG_LIBRARY_LINKAGE static)
-set(CMAKE_TOOLCHAIN_FILE "D:/Dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "D:/programs/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 # Set 64bit plateform
 set(CMAKE_GENERATOR_PLATFORM "x64")
 
 # Setup the project with used languages
-project("CUDA_TESTS" CXX)
+project("TX_52_CUDA" CXX)
 
 # Find libs
 find_package(OpenGL REQUIRED)
